@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  gap: 2em;
+  justify-content: space-around;
+  padding-bottom: 2em;
+  border-bottom: 10px #9b0a889a solid;
+}
+.title {
+  font-weight: bold;
+  font-size: 3em;
+  color: #910b7f;
+}
+.image {
+  border-radius: 1em;
+  width: 200px;
+  height: 160px;
+}
+@media (max-width: 571px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .title {
+    font-size: 2.4em;
+  }
+}

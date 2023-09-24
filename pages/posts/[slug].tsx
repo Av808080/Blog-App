@@ -1,9 +1,15 @@
 import React from 'react'
+import { useRouter } from 'next/router'
+import PostContent from '@/Components/posts/PostDetail/PostContent'
 
 const PostDetailPage = () => {
+  const { query: { slug } } = useRouter()
+
+  if (!slug)
+    return <p>Loading...</p>
   return (
     <div>
-      detail Page
+      <PostContent title={slug.toString()} />
     </div>
   )
 }

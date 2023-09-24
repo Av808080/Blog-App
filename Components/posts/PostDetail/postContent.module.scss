@@ -1,0 +1,12 @@
+.article {
+  background-color: #999;
+  min-height: calc(100vh - 4em);
+  padding: 2em;
+  .main {
+    border-radius: 0.5em;
+    max-width: 60em;
+    margin: auto;
+    background-color: #e1e1e1;
+    padding: 2em;
+  }
+}
