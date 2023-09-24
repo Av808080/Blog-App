@@ -1,0 +1,14 @@
+.container{
+    padding: 4em 2em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(360px,1fr));
+    gap: 1em;
+    row-gap: 4em;
+    place-items: center;
+    place-content: center;
+}
+@media (max-width:481px){
+    .container{
+        padding: 3em 0.1em ;
+    }
+}
