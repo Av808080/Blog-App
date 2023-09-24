@@ -1,7 +1,11 @@
+import FeturedPosts from "@/Components/HomePage/FeturedPosts"
+import Hero from "@/Components/HomePage/Hero"
+
 const Home = () => {
   return (
     <>
-      HomePage
+      <Hero />
+      <FeturedPosts />
     </>
   )
 }

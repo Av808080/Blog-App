@@ -1,0 +1,40 @@
+.banner {
+  height: max-content;
+  background-color: #3b3c3e;
+  color: #f7f6f6bf;
+  text-align: center;
+  padding: 4em 3em;
+}
+.Logo {
+  width: 240px;
+  height: 240px;
+}
+.header {
+  font-size: 2.5em;
+  padding: 0.6em;
+}
+.description {
+  font-size: 1.3em;
+}
+.title {
+  animation: ChangeShadow 3000ms forwards infinite;
+}
+@keyframes ChangeShadow {
+  50%,
+  100% {
+    text-shadow: #05823b 2px 2px 20px;
+  }
+  25%,
+  75% {
+    text-shadow: #0ce90c 2px 2px 20px;
+  }
+}
+@media (max-width:380px){
+    .Logo{
+        width: 120px;
+        height: 120px;
+    }
+    .banner{
+        font-size: 0.8em;
+    }
+}
