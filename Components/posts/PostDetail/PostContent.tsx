@@ -1,17 +1,15 @@
 import { FC } from 'react'
 import styles from './postContent.module.scss'
 import PostHeader from './PostHeader'
+import ReactMarkdown from 'react-markdown'
+import { SinglePost } from '@/Types/Type'
 
-interface Props {
-    title: string
-}
-
-const PostContent: FC<Props> = ({ title }) => {
+const PostContent: FC<SinglePost> = ({ post }) => {
     return (
         <section className={styles.article}>
             <div className={styles.main}>
-            <PostHeader title={title} image={`GQL1.png`} />
-            <p>CONTENT...</p>
+                <PostHeader post={post} />
+                <ReactMarkdown>{post.content}</ReactMarkdown>
             </div>
         </section>
     )
