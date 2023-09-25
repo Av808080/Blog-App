@@ -8,7 +8,7 @@
   > .linkItem {
     font-weight: bold;
     letter-spacing: 0.05em;
-    font-size: 1.3em;
+    font-size: 1.4em;
     color: #fbfbfb;
   }
 }
@@ -16,8 +16,11 @@
   display: flex;
   gap: 6em;
   justify-content: space-around;
+  .linkItem{
+    font-size: 1.15em;
+  }
   .linkItem:hover {
-    font-size: 1.05em;
+    font-size: 1.25em;
   }
 }
 .linkItem {
