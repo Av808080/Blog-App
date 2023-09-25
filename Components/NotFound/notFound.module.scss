@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  min-height: calc(100vh - 4em);
+  align-items: center;
+  background-color: var(--bg-color);
+  padding: 4em 2em;
+}
+.HomeLink {
+    background-color: #e06113;
+    border-radius: 0.875em;
+    padding: 0.5em 2em;
+    text-decoration: none;
+    color: #232323;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: all 300ms;
+    &:hover{
+        background-color: #e06213ca;
+    }
+}
+.title {
+    font-size: 3em;
+    text-align: center;
+}
+.image {
+    width: 600px;
+    height: 300px;
+}
+@media(max-width:729px){
+    .image{
+        width: 400px;
+        height: 200px;
+    }
+}
+@media (max-width:481px){
+    .image{
+        width: 200px;
+        height: 100px;
+    }
+    .title{
+        font-size: 2.25em;
+    }
+    .HomeLink{
+        font-size: 1em;
+    }
+}
