@@ -1,0 +1,40 @@
+.Error {
+  background-color: #e91232;
+  color: #e3e3e3;
+}
+.Pending {
+  background-color: #232323;
+  color: #e3e3e3;
+}
+.Succuss {
+  background-color: #2ecc2e;
+}
+.container {
+  position: fixed;
+  bottom: 0;
+  min-width: 500px;
+  padding: 1.25em;
+  left: 50%;
+  border-radius: 0.5em;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+}
+.message{
+    font-size: 1.1em;
+}
+.title{
+    font-size: 1.25em;
+    font-weight: bold;
+}
+@media(max-width:569px){
+    .container{
+        min-width: 300px;
+    }
+    .message{
+        font-size: 0.875em;
+    }
+    .title{
+        font-size: 1em;
+    }
+}
