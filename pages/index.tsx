@@ -1,19 +1,14 @@
 import { FC } from 'react'
-import FeturedPosts from "@/Components/HomePage/FeturedPosts"
-import Hero from "@/Components/HomePage/Hero"
 import { getfeturedPosts } from "@/lib/post-util"
 import { AllPosts } from '@/Types/Type'
+import HomePage from '@/Components/HomePage/HomePage'
 
 
 const Home: FC<AllPosts> = ({ posts }) => {
-  return (
-    <>
-      <Hero />
-      <FeturedPosts posts={posts} />
-    </>
-  )
+  return <HomePage posts={posts} />
 }
 export default Home
+
 
 export async function getStaticProps() {
   const feturedPosts = getfeturedPosts()

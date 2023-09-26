@@ -1,15 +1,22 @@
 import { FC } from 'react'
+import Head from 'next/head'
 import PostContent from '@/Components/posts/PostDetail/PostContent'
 import { getPostdata, postFiles } from '@/lib/post-util'
 import { SinglePost } from '@/Types/Type'
 import Spinner from '@/Components/shared/Spinner'
 
-
-
 const PostDetailPage: FC<SinglePost> = ({ post }) => {
   if (!post)
     return <Spinner />
-  return <PostContent post={post} />
+  return (
+    <>
+      <Head>
+        <title>{post.title}</title>
+        <meta name='description' content={post.excerpt} />
+      </Head>
+      <PostContent post={post} />
+    </>
+  )
 }
 
 export default PostDetailPage
