@@ -15,7 +15,7 @@ const PostItem: FC<SinglePost> = ({ post }) => {
     return (
         <Link className={styles.link} href={`/posts/${title.replaceAll(' ', '-')}`}>
             <article className={styles.card}>
-                <Image src={`/Images/${image}`} className={styles.card_img} alt={title} width={360} height={240} />
+                <Image src={`/Images/Posts/${image}`} className={styles.card_img} alt={title} width={360} height={240} />
                 <div className={styles.description}>
                     <h3 className={styles.card_title} >{title}</h3>
                     <time className={styles.date}>{formattedDate}</time>

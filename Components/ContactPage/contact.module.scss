@@ -2,7 +2,7 @@
   max-width: 50em;
   background-color: #e0dddd;
   padding: 1em;
-  margin:auto;
+  margin: auto;
   border-radius: 0.75em;
 }
 .formContent {
@@ -10,8 +10,8 @@
   flex-direction: column;
   gap: 1.5em;
 }
-.overlay{
-    padding: 2em;
+.overlay {
+  padding: 2em;
 }
 .title {
   font-size: 2.5em;
@@ -78,17 +78,20 @@
     }
   }
 }
-@media(max-width:573px){
-    .title{
-        font-size: 2em;
+.invalid {
+  outline: 2px solid #ee3443;
+}
+@media (max-width: 573px) {
+  .title {
+    font-size: 2em;
+  }
+  .authControlers {
+    flex-direction: column;
+    .controller {
+      width: 100%;
     }
-    .authControlers{
-        flex-direction: column;
-        .controller{
-            width: 100%;
-        }
-    }
-    .submitButton{
-        margin: auto;
-    }
+  }
+  .submitButton {
+    margin: auto;
+  }
 }

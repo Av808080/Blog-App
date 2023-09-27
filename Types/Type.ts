@@ -7,7 +7,7 @@ type Blog = {
 };
 export type Post = Blog & {
   content: string;
-  //   slug: string;
+  slug:string
 };
 export interface AllPosts {
   posts: Post[];
@@ -16,3 +16,4 @@ export interface AllPosts {
 export interface SinglePost {
   post: Post;
 }
+export type Status = "Pending" | "Error" | "Succuss" | ''
