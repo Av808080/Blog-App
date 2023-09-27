@@ -1,15 +1,28 @@
 import { FC } from 'react'
+import Image from 'next/image'
 import styles from './postContent.module.scss'
 import PostHeader from './PostHeader'
 import ReactMarkdown from 'react-markdown'
 import { SinglePost } from '@/Types/Type'
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { coldarkDark } from 'react-syntax-highlighter/dist/cjs/styles/prism'
+
 
 const PostContent: FC<SinglePost> = ({ post }) => {
+    const customComponents = {
+        img: ({ ...props }) => {
+            return <Image className={styles.image} src={`/Images/Posts/${props.src}`} alt={props.alt} width={600} height={300} />
+        },
+        code: ({ ...props }) => {
+            const [_code] = (props.children);
+            return <SyntaxHighlighter language={props.className.split('-')[1]} style={coldarkDark}  >{_code} </SyntaxHighlighter>
+        }
+    }
     return (
         <section className={styles.article}>
             <div className={styles.main}>
                 <PostHeader post={post} />
-                <ReactMarkdown>{post.content}</ReactMarkdown>
+                <ReactMarkdown components={customComponents} className={styles.content}>{post.content}</ReactMarkdown>
             </div>
         </section>
     )

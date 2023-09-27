@@ -9,3 +9,38 @@
     padding: 2em;
   }
 }
+.content {
+  display: flex;
+  padding: 0.5em 1em;
+  flex-direction: column;
+  gap: 1em;
+  line-height: 1.5em;
+}
+.image {
+  display: block;
+  margin: auto;
+  width: 600px;
+  height: 350px;
+  overflow: hidden;
+}
+@media (max-width: 784px) {
+  .image {
+    width: 100%;
+    height: 90%;
+  }
+}
+@media (max-width: 481px) {
+  .image {
+    width: 100%;
+    height: 180px;
+  }
+  .content p {
+    font-size: 0.875em;
+  }
+  .article {
+    padding: 2em 1em;
+    .main {
+      padding: 1em 0.5em;
+    }
+  }
+}
